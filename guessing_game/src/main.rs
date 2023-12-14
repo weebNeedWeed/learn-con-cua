@@ -1,9 +1,9 @@
-use std::io;
 use rand::Rng;
 use std::cmp::Ordering;
+use std::io;
 
 fn main() {
-    let secret : u32 = rand::thread_rng().gen_range(1..=100);
+    let secret: u32 = rand::thread_rng().gen_range(1..=100);
     println!("Secret num = {secret}");
 
     loop {
@@ -16,7 +16,7 @@ fn main() {
             .expect("Failed to read line");
 
         let guess: u32 = match guess.trim().parse() {
-            Ok(num) => num, 
+            Ok(num) => num,
             Err(_) => continue,
         };
 
@@ -29,5 +29,4 @@ fn main() {
             }
         }
     }
-
 }
