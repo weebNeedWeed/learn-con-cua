@@ -1,6 +1,6 @@
-use std::io;
-use std::cmp::Ordering;
 use rand::Rng;
+use std::cmp::Ordering;
+use std::io;
 
 fn main() {
     let secret = generate_random_number();
@@ -16,11 +16,11 @@ fn main() {
     match guess.cmp(&secret) {
         Ordering::Less => println!("less"),
         Ordering::Greater => println!("Greater"),
-        Ordering::Equal => println!("Equal")
+        Ordering::Equal => println!("Equal"),
     }
 }
 
 fn generate_random_number() -> u32 {
-    let num = rand::thread_rng().gen_range(1..=100);
-    num
+    let random_number = rand::thread_rng().gen_range(1..=100);
+    random_number
 }
