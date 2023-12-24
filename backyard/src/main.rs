@@ -1,8 +1,7 @@
-use crate::garden::vegetables::Asparagus;
-
-pub mod garden;
-
 fn main() {
-    let asparagus = Asparagus {};
-    println!("{asparagus:?}");
+    let smt = vec![1,2,3];
+
+    for (i, v) in smt.iter().enumerate() {
+
+    }
 }
